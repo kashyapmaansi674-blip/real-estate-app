@@ -16,7 +16,7 @@ const amenitiesList = ["Swimming Pool", "Parking", "24/7 Security", "Power Backu
 function Navbar({ onNav }) {
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: 'rgba(20,20,20,0.97)', padding: '16px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-      <div onClick={function() { onNav('home'); }} style={{ color: '#D4A853', fontSize: 22, fontWeight: 'bold', letterSpacing: 3, cursor: 'pointer' }}>ESTATO</div>
+      <div onClick={function() { onNav('home'); }} style={{ color: '#D4A853', fontSize: 22, fontWeight: 'bold', letterSpacing: 3, cursor: 'pointer' }}>DoonEstates</div>
       <div style={{ display: 'flex', gap: 28 }}>
         {[['Properties', 'properties'], ['About', 'about'], ['Contact', 'contact']].map(function(item) {
           return (
@@ -44,8 +44,6 @@ function AboutPage({ onNav }) {
     <div style={{ fontFamily: 'Georgia, serif', background: '#f9f6f2', minHeight: '100vh' }}>
       <Navbar onNav={onNav} />
       <div style={{ paddingTop: 72 }}>
-
-        {/* Hero */}
         <div style={{ background: 'linear-gradient(135deg, #1a1a1a, #2e1018)', padding: '80px 40px', textAlign: 'center' }}>
           <div style={{ color: '#D4A853', fontSize: 11, letterSpacing: 5, marginBottom: 16 }}>ABOUT US</div>
           <h1 style={{ color: 'white', fontSize: 48, fontWeight: 'normal', marginBottom: 20 }}>Meet Maansi Kashyap</h1>
@@ -53,23 +51,14 @@ function AboutPage({ onNav }) {
             Your trusted real estate partner in Dehradun, helping families and investors find their perfect property in the Doon Valley.
           </p>
         </div>
-
-        {/* About Content */}
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '60px 40px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
           <div>
             <div style={{ color: '#7B1A2A', fontSize: 11, letterSpacing: 4, marginBottom: 12 }}>WHO I AM</div>
             <h2 style={{ fontSize: 32, fontWeight: 'normal', color: '#222', marginBottom: 20 }}>Passionate About Finding Dream Homes</h2>
-            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15, marginBottom: 16 }}>
-              I am Maansi Kashyap, a dedicated real estate professional based in Dehradun, Uttarakhand. With a deep understanding of the local property market, I specialise in helping clients find the perfect home, plot, or commercial space that matches their vision and budget.
-            </p>
-            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15, marginBottom: 16 }}>
-              Whether you are a first-time buyer looking for a cozy apartment, a family seeking a spacious villa, or an investor exploring commercial opportunities — I am here to guide you every step of the way.
-            </p>
-            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15 }}>
-              My approach is simple — transparency, trust, and a genuine commitment to your best interests. Every property I list is personally verified to ensure you get the best value for your investment.
-            </p>
+            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15, marginBottom: 16 }}>I am Maansi Kashyap, a dedicated real estate professional based in Dehradun, Uttarakhand. With a deep understanding of the local property market, I specialise in helping clients find the perfect home, plot, or commercial space that matches their vision and budget.</p>
+            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15, marginBottom: 16 }}>Whether you are a first-time buyer looking for a cozy apartment, a family seeking a spacious villa, or an investor exploring commercial opportunities — I am here to guide you every step of the way.</p>
+            <p style={{ color: '#666', lineHeight: 1.9, fontSize: 15 }}>My approach is simple — transparency, trust, and a genuine commitment to your best interests. Every property I list is personally verified to ensure you get the best value for your investment.</p>
           </div>
-
           <div>
             <div style={{ color: '#7B1A2A', fontSize: 11, letterSpacing: 4, marginBottom: 12 }}>WHAT I OFFER</div>
             <h2 style={{ fontSize: 32, fontWeight: 'normal', color: '#222', marginBottom: 20 }}>Services</h2>
@@ -93,8 +82,6 @@ function AboutPage({ onNav }) {
             })}
           </div>
         </div>
-
-        {/* Stats */}
         <div style={{ background: '#7B1A2A', padding: '48px 40px' }}>
           <div style={{ maxWidth: 800, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, textAlign: 'center' }}>
             {[['8+', 'Properties Listed'], ['100+', 'Happy Clients'], ['5+', 'Years Experience'], ['4', 'Property Types']].map(function(s) {
@@ -107,7 +94,6 @@ function AboutPage({ onNav }) {
             })}
           </div>
         </div>
-
         <Footer onNav={onNav} />
       </div>
     </div>
@@ -117,28 +103,19 @@ function AboutPage({ onNav }) {
 function ContactPage({ onNav }) {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
-
   return (
     <div style={{ fontFamily: 'Georgia, serif', background: '#f9f6f2', minHeight: '100vh' }}>
       <Navbar onNav={onNav} />
       <div style={{ paddingTop: 72 }}>
-
-        {/* Hero */}
         <div style={{ background: 'linear-gradient(135deg, #1a1a1a, #2e1018)', padding: '80px 40px', textAlign: 'center' }}>
           <div style={{ color: '#D4A853', fontSize: 11, letterSpacing: 5, marginBottom: 16 }}>GET IN TOUCH</div>
           <h1 style={{ color: 'white', fontSize: 48, fontWeight: 'normal', marginBottom: 20 }}>Contact Us</h1>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 16, maxWidth: 500, margin: '0 auto' }}>
-            Have a question about a property? We'd love to hear from you.
-          </p>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 16, maxWidth: 500, margin: '0 auto' }}>Have a question about a property? We'd love to hear from you.</p>
         </div>
-
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '60px 40px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
-
-          {/* Contact Info */}
           <div>
             <div style={{ color: '#7B1A2A', fontSize: 11, letterSpacing: 4, marginBottom: 12 }}>CONTACT DETAILS</div>
             <h2 style={{ fontSize: 30, fontWeight: 'normal', color: '#222', marginBottom: 32 }}>Reach Out Anytime</h2>
-
             {[
               ['📧', 'Email', 'kashyapmaansi674@gmail.com', 'mailto:kashyapmaansi674@gmail.com'],
               ['📞', 'Phone', '+91 98765 43210', 'tel:+919876543210'],
@@ -150,28 +127,19 @@ function ContactPage({ onNav }) {
                   <div style={{ fontSize: 24, minWidth: 36, marginTop: 2 }}>{item[0]}</div>
                   <div>
                     <div style={{ fontSize: 11, letterSpacing: 2, color: '#999', marginBottom: 4, textTransform: 'uppercase' }}>{item[1]}</div>
-                    {item[3] ? (
-                      <a href={item[3]} style={{ color: '#7B1A2A', fontSize: 15, textDecoration: 'none' }}>{item[2]}</a>
-                    ) : (
-                      <div style={{ color: '#333', fontSize: 15 }}>{item[2]}</div>
-                    )}
+                    {item[3] ? <a href={item[3]} style={{ color: '#7B1A2A', fontSize: 15, textDecoration: 'none' }}>{item[2]}</a> : <div style={{ color: '#333', fontSize: 15 }}>{item[2]}</div>}
                   </div>
                 </div>
               );
             })}
           </div>
-
-          {/* Contact Form */}
           <div style={{ background: 'white', padding: 32, border: '1px solid #e8e0d5' }}>
             {sent ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
                 <div style={{ fontSize: 48 }}>✅</div>
                 <h3 style={{ color: '#7B1A2A', marginTop: 16, fontSize: 22, fontWeight: 'normal' }}>Message Sent!</h3>
                 <p style={{ color: '#888', marginTop: 8 }}>We'll get back to you within 24 hours.</p>
-                <button onClick={function() { setSent(false); setForm({ name: '', email: '', phone: '', message: '' }); }}
-                  style={{ marginTop: 20, background: '#7B1A2A', color: 'white', border: 'none', padding: '10px 24px', cursor: 'pointer' }}>
-                  Send Another
-                </button>
+                <button onClick={function() { setSent(false); setForm({ name: '', email: '', phone: '', message: '' }); }} style={{ marginTop: 20, background: '#7B1A2A', color: 'white', border: 'none', padding: '10px 24px', cursor: 'pointer' }}>Send Another</button>
               </div>
             ) : (
               <div>
@@ -181,29 +149,15 @@ function ContactPage({ onNav }) {
                   return (
                     <div key={field} style={{ marginBottom: 16 }}>
                       <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>{field}</div>
-                      <input
-                        value={form[field]}
-                        onChange={function(e) { setForm(Object.assign({}, form, { [field]: e.target.value })); }}
-                        placeholder={field === 'name' ? 'Your Name' : field === 'email' ? 'your@email.com' : '+91 98765 43210'}
-                        style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
-                      />
+                      <input value={form[field]} onChange={function(e) { setForm(Object.assign({}, form, { [field]: e.target.value })); }} placeholder={field === 'name' ? 'Your Name' : field === 'email' ? 'your@email.com' : '+91 98765 43210'} style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }} />
                     </div>
                   );
                 })}
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>Message</div>
-                  <textarea
-                    value={form.message}
-                    onChange={function(e) { setForm(Object.assign({}, form, { message: e.target.value })); }}
-                    placeholder="How can we help you?"
-                    style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 100, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }}
-                  />
+                  <textarea value={form.message} onChange={function(e) { setForm(Object.assign({}, form, { message: e.target.value })); }} placeholder="How can we help you?" style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 100, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }} />
                 </div>
-                <button
-                  onClick={function() { if (form.name && form.email) { setSent(true); } }}
-                  style={{ width: '100%', background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>
-                  SEND MESSAGE
-                </button>
+                <button onClick={function() { if (form.name && form.email) { setSent(true); } }} style={{ width: '100%', background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>SEND MESSAGE</button>
               </div>
             )}
           </div>
@@ -217,33 +171,21 @@ function ContactPage({ onNav }) {
 function ListPropertyPage({ onNav }) {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '', location: '', type: 'Apartment', price: '', description: '' });
-
   return (
     <div style={{ fontFamily: 'Georgia, serif', background: '#f9f6f2', minHeight: '100vh' }}>
       <Navbar onNav={onNav} />
       <div style={{ paddingTop: 72 }}>
-
-        {/* Hero */}
         <div style={{ background: 'linear-gradient(135deg, #1a1a1a, #2e1018)', padding: '80px 40px', textAlign: 'center' }}>
           <div style={{ color: '#D4A853', fontSize: 11, letterSpacing: 5, marginBottom: 16 }}>LIST WITH US</div>
           <h1 style={{ color: 'white', fontSize: 48, fontWeight: 'normal', marginBottom: 20 }}>List Your Property</h1>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 16, maxWidth: 500, margin: '0 auto' }}>
-            Reach thousands of genuine buyers and tenants across Dehradun.
-          </p>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 16, maxWidth: 500, margin: '0 auto' }}>Reach thousands of genuine buyers and tenants across Dehradun.</p>
         </div>
-
-        {/* Why List */}
         <div style={{ background: 'white', padding: '48px 40px' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ color: '#7B1A2A', fontSize: 11, letterSpacing: 4, marginBottom: 12 }}>WHY LIST WITH US</div>
             <h2 style={{ fontSize: 32, fontWeight: 'normal', color: '#222', marginBottom: 40 }}>We Make Selling Easy</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 28 }}>
-              {[
-                ['🎯', 'Targeted Reach', 'Your property shown to serious buyers only'],
-                ['📸', 'Professional Listing', 'We create a beautiful listing for your property'],
-                ['💬', 'Quick Response', 'We respond to all inquiries within 24 hours'],
-                ['🔒', 'Verified Buyers', 'All interested parties are verified before contact'],
-              ].map(function(item) {
+              {[['🎯', 'Targeted Reach', 'Your property shown to serious buyers only'], ['📸', 'Professional Listing', 'We create a beautiful listing for your property'], ['💬', 'Quick Response', 'We respond to all inquiries within 24 hours'], ['🔒', 'Verified Buyers', 'All interested parties are verified before contact']].map(function(item) {
                 return (
                   <div key={item[1]} style={{ padding: 24, border: '1px solid #e8e0d5', textAlign: 'center' }}>
                     <div style={{ fontSize: 32, marginBottom: 12 }}>{item[0]}</div>
@@ -255,75 +197,42 @@ function ListPropertyPage({ onNav }) {
             </div>
           </div>
         </div>
-
-        {/* Form */}
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '60px 40px' }}>
           <div style={{ color: '#7B1A2A', fontSize: 11, letterSpacing: 4, marginBottom: 12 }}>PROPERTY DETAILS</div>
           <h2 style={{ fontSize: 32, fontWeight: 'normal', color: '#222', marginBottom: 32 }}>Submit Your Property</h2>
-
           {sent ? (
             <div style={{ background: 'white', padding: 40, border: '1px solid #e8e0d5', textAlign: 'center' }}>
               <div style={{ fontSize: 48 }}>✅</div>
               <h3 style={{ color: '#7B1A2A', marginTop: 16, fontSize: 22, fontWeight: 'normal' }}>Property Submitted!</h3>
-              <p style={{ color: '#888', marginTop: 8, lineHeight: 1.7 }}>Thank you! Maansi Kashyap will review your listing and contact you at <strong>{form.phone}</strong> within 24 hours.</p>
-              <button onClick={function() { setSent(false); setForm({ name: '', phone: '', email: '', location: '', type: 'Apartment', price: '', description: '' }); }}
-                style={{ marginTop: 24, background: '#7B1A2A', color: 'white', border: 'none', padding: '12px 28px', cursor: 'pointer', fontSize: 13, letterSpacing: 1 }}>
-                Submit Another
-              </button>
+              <p style={{ color: '#888', marginTop: 8, lineHeight: 1.7 }}>Thank you! DoonEstates will review your listing and contact you at <strong>{form.phone}</strong> within 24 hours.</p>
+              <button onClick={function() { setSent(false); setForm({ name: '', phone: '', email: '', location: '', type: 'Apartment', price: '', description: '' }); }} style={{ marginTop: 24, background: '#7B1A2A', color: 'white', border: 'none', padding: '12px 28px', cursor: 'pointer', fontSize: 13, letterSpacing: 1 }}>Submit Another</button>
             </div>
           ) : (
             <div style={{ background: 'white', padding: 32, border: '1px solid #e8e0d5' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                {[
-                  ['name', 'Your Full Name', 'text'],
-                  ['phone', 'Phone Number', 'tel'],
-                  ['email', 'Email Address', 'email'],
-                  ['location', 'Property Location', 'text'],
-                  ['price', 'Expected Price', 'text'],
-                ].map(function(field) {
+                {[['name', 'Your Full Name', 'text'], ['phone', 'Phone Number', 'tel'], ['email', 'Email Address', 'email'], ['location', 'Property Location', 'text'], ['price', 'Expected Price', 'text']].map(function(field) {
                   return (
                     <div key={field[0]}>
                       <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>{field[1]}</div>
-                      <input
-                        type={field[2]}
-                        value={form[field[0]]}
-                        onChange={function(e) { setForm(Object.assign({}, form, { [field[0]]: e.target.value })); }}
-                        placeholder={field[1]}
-                        style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
-                      />
+                      <input type={field[2]} value={form[field[0]]} onChange={function(e) { setForm(Object.assign({}, form, { [field[0]]: e.target.value })); }} placeholder={field[1]} style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }} />
                     </div>
                   );
                 })}
                 <div>
                   <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>Property Type</div>
-                  <select
-                    value={form.type}
-                    onChange={function(e) { setForm(Object.assign({}, form, { type: e.target.value })); }}
-                    style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', background: 'white', boxSizing: 'border-box' }}>
-                    {['Apartment', 'Villa', 'Plot', 'Commercial'].map(function(t) {
-                      return <option key={t}>{t}</option>;
-                    })}
+                  <select value={form.type} onChange={function(e) { setForm(Object.assign({}, form, { type: e.target.value })); }} style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', background: 'white', boxSizing: 'border-box' }}>
+                    {['Apartment', 'Villa', 'Plot', 'Commercial'].map(function(t) { return <option key={t}>{t}</option>; })}
                   </select>
                 </div>
               </div>
               <div style={{ marginTop: 16 }}>
                 <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>Property Description</div>
-                <textarea
-                  value={form.description}
-                  onChange={function(e) { setForm(Object.assign({}, form, { description: e.target.value })); }}
-                  placeholder="Describe your property — size, condition, special features..."
-                  style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 100, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }}
-                />
+                <textarea value={form.description} onChange={function(e) { setForm(Object.assign({}, form, { description: e.target.value })); }} placeholder="Describe your property — size, condition, special features..." style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 100, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }} />
               </div>
-              <button
-                onClick={function() { if (form.name && form.phone) { setSent(true); } }}
-                style={{ width: '100%', marginTop: 20, background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>
-                SUBMIT PROPERTY
-              </button>
+              <button onClick={function() { if (form.name && form.phone) { setSent(true); } }} style={{ width: '100%', marginTop: 20, background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>SUBMIT PROPERTY</button>
             </div>
           )}
         </div>
-
         <Footer onNav={onNav} />
       </div>
     </div>
@@ -335,7 +244,7 @@ function Footer({ onNav }) {
     <div style={{ background: '#1a1a1a', padding: '40px', marginTop: 40 }}>
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40 }}>
         <div>
-          <div style={{ color: '#D4A853', fontSize: 20, letterSpacing: 3, marginBottom: 12 }}>ESTATO</div>
+          <div style={{ color: '#D4A853', fontSize: 20, letterSpacing: 3, marginBottom: 12 }}>DoonEstates</div>
           <p style={{ color: '#888', fontSize: 13, lineHeight: 1.8 }}>Your trusted real estate partner in Dehradun, Uttarakhand.</p>
         </div>
         <div>
@@ -352,7 +261,7 @@ function Footer({ onNav }) {
         </div>
       </div>
       <div style={{ borderTop: '1px solid #333', marginTop: 32, paddingTop: 20, textAlign: 'center', color: '#555', fontSize: 12 }}>
-        © 2025 Estato — Maansi Kashyap. All rights reserved.
+        © 2025 DoonEstates — Maansi Kashyap. All rights reserved.
       </div>
     </div>
   );
@@ -361,6 +270,7 @@ function Footer({ onNav }) {
 function App() {
   const [page, setPage] = useState('home');
   const [filter, setFilter] = useState('All');
+  const [search, setSearch] = useState('');
   const [selected, setSelected] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
@@ -371,7 +281,11 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  const filtered = filter === 'All' ? properties : properties.filter(function(p) { return p.type === filter; });
+  const filtered = properties.filter(function(p) {
+    const matchesFilter = filter === 'All' || p.type === filter;
+    const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || p.location.toLowerCase().includes(search.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
 
   if (page === 'about') return <AboutPage onNav={handleNav} />;
   if (page === 'contact') return <ContactPage onNav={handleNav} />;
@@ -391,7 +305,6 @@ function App() {
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: 14 }}>📍 {selected.location}</p>
             </div>
           </div>
-
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: 40, padding: '40px', maxWidth: 1200, margin: '0 auto' }}>
             <div>
               <div style={{ display: 'flex', gap: 40, padding: '24px 0', borderBottom: '2px solid #e8e0d5', marginBottom: 28, flexWrap: 'wrap' }}>
@@ -408,17 +321,12 @@ function App() {
                   <div style={{ color: '#999', fontSize: 12, letterSpacing: 1 }}>AREA</div>
                 </div>
               </div>
-
               <h3 style={{ fontSize: 22, marginBottom: 12, color: '#333' }}>About This Property</h3>
               <p style={{ color: '#666', lineHeight: 1.8, fontSize: 15 }}>{selected.description} This property offers an exceptional experience with premium finishes throughout. Located in one of Dehradun's most sought after neighbourhoods, residents enjoy easy access to schools, hospitals, and commercial hubs.</p>
-
               <h3 style={{ fontSize: 22, margin: '28px 0 12px', color: '#333' }}>Amenities</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
-                {amenitiesList.map(function(a) {
-                  return <div key={a} style={{ background: 'white', padding: '12px 16px', border: '1px solid #e8e0d5', fontSize: 13, color: '#444' }}>✓ {a}</div>;
-                })}
+                {amenitiesList.map(function(a) { return <div key={a} style={{ background: 'white', padding: '12px 16px', border: '1px solid #e8e0d5', fontSize: 13, color: '#444' }}>✓ {a}</div>; })}
               </div>
-
               <h3 style={{ fontSize: 22, margin: '28px 0 12px', color: '#333' }}>Location</h3>
               <div style={{ background: '#e8e4dc', height: 220, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#888', border: '2px dashed #ccc' }}>
                 <div style={{ fontSize: 32 }}>📍</div>
@@ -426,13 +334,12 @@ function App() {
                 <div style={{ fontSize: 13, marginTop: 4 }}>Map Placeholder</div>
               </div>
             </div>
-
             <div style={{ background: 'white', padding: 28, border: '1px solid #e8e0d5', alignSelf: 'start', position: 'sticky', top: 90 }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: 20 }}>
                   <div style={{ fontSize: 40 }}>✅</div>
                   <h3 style={{ color: '#7B1A2A', marginTop: 12 }}>Inquiry Sent!</h3>
-                  <p style={{ color: '#888', fontSize: 13, marginTop: 8 }}>Maansi Kashyap will contact you within 24 hours.</p>
+                  <p style={{ color: '#888', fontSize: 13, marginTop: 8 }}>DoonEstates will contact you within 24 hours.</p>
                 </div>
               ) : (
                 <div>
@@ -442,29 +349,15 @@ function App() {
                     return (
                       <div key={field} style={{ marginBottom: 14 }}>
                         <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>{field}</div>
-                        <input
-                          value={form[field]}
-                          onChange={function(e) { setForm(Object.assign({}, form, { [field]: e.target.value })); }}
-                          placeholder={field === 'name' ? 'Your Name' : field === 'email' ? 'your@email.com' : '+91 98765 43210'}
-                          style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }}
-                        />
+                        <input value={form[field]} onChange={function(e) { setForm(Object.assign({}, form, { [field]: e.target.value })); }} placeholder={field === 'name' ? 'Your Name' : field === 'email' ? 'your@email.com' : '+91 98765 43210'} style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, outline: 'none', boxSizing: 'border-box' }} />
                       </div>
                     );
                   })}
                   <div style={{ marginBottom: 14 }}>
                     <div style={{ fontSize: 11, letterSpacing: 1, color: '#888', marginBottom: 5, textTransform: 'uppercase' }}>Message</div>
-                    <textarea
-                      value={form.message}
-                      onChange={function(e) { setForm(Object.assign({}, form, { message: e.target.value })); }}
-                      placeholder="I would like to schedule a visit..."
-                      style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 90, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }}
-                    />
+                    <textarea value={form.message} onChange={function(e) { setForm(Object.assign({}, form, { message: e.target.value })); }} placeholder="I would like to schedule a visit..." style={{ width: '100%', padding: '10px 12px', border: '1px solid #ddd', fontSize: 14, minHeight: 90, outline: 'none', boxSizing: 'border-box', resize: 'vertical' }} />
                   </div>
-                  <button
-                    onClick={function() { if (form.name && form.email) { setSubmitted(true); } }}
-                    style={{ width: '100%', background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>
-                    SEND INQUIRY
-                  </button>
+                  <button onClick={function() { if (form.name && form.email) { setSubmitted(true); } }} style={{ width: '100%', background: '#7B1A2A', color: 'white', border: 'none', padding: 14, fontSize: 13, letterSpacing: 2, cursor: 'pointer' }}>SEND INQUIRY</button>
                 </div>
               )}
             </div>
@@ -478,20 +371,13 @@ function App() {
   return (
     <div style={{ fontFamily: 'Georgia, serif', background: '#f9f6f2', minHeight: '100vh' }}>
       <Navbar onNav={handleNav} />
-
       <div style={{ background: 'linear-gradient(135deg, #1a1a1a 0%, #2e1018 100%)', paddingTop: 72, minHeight: '88vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '120px 20px 60px' }}>
         <div style={{ color: '#D4A853', fontSize: 11, letterSpacing: 5, marginBottom: 20 }}>PREMIUM PROPERTIES — DEHRADUN</div>
         <h1 style={{ color: 'white', fontSize: 64, fontWeight: 'normal', lineHeight: 1.1, margin: 0 }}>Find Your Perfect<br /><span style={{ color: '#D4A853', fontStyle: 'italic' }}>Property</span></h1>
         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 16, marginTop: 20, maxWidth: 480 }}>Curated listings across Dehradun and the Doon Valley by Maansi Kashyap</p>
         <div style={{ display: 'flex', gap: 16, marginTop: 32, flexWrap: 'wrap', justifyContent: 'center' }}>
-          <button onClick={function() { window.scrollTo({ top: 500, behavior: 'smooth' }); }}
-            style={{ background: '#7B1A2A', color: 'white', border: 'none', padding: '14px 32px', fontSize: 13, letterSpacing: 1, cursor: 'pointer' }}>
-            BROWSE LISTINGS
-          </button>
-          <button onClick={function() { handleNav('contact'); }}
-            style={{ background: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.4)', padding: '14px 32px', fontSize: 13, letterSpacing: 1, cursor: 'pointer' }}>
-            CONTACT US
-          </button>
+          <button onClick={function() { window.scrollTo({ top: 500, behavior: 'smooth' }); }} style={{ background: '#7B1A2A', color: 'white', border: 'none', padding: '14px 32px', fontSize: 13, letterSpacing: 1, cursor: 'pointer' }}>BROWSE LISTINGS</button>
+          <button onClick={function() { handleNav('contact'); }} style={{ background: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.4)', padding: '14px 32px', fontSize: 13, letterSpacing: 1, cursor: 'pointer' }}>CONTACT US</button>
         </div>
         <div style={{ display: 'flex', gap: 60, marginTop: 60, flexWrap: 'wrap', justifyContent: 'center' }}>
           {[['8+', 'Properties'], ['4', 'Types'], ['100+', 'Happy Clients']].map(function(s) {
@@ -513,7 +399,8 @@ function App() {
             </button>
           );
         })}
-        <span style={{ marginLeft: 'auto', color: '#888', fontSize: 12 }}>{filtered.length} properties found</span>
+        <input value={search} onChange={function(e) { setSearch(e.target.value); }} placeholder="🔍  Search by name or location..." style={{ marginLeft: 'auto', padding: '8px 16px', background: '#2a2a2a', border: '1px solid #444', color: 'white', fontSize: 13, outline: 'none', width: 260 }} />
+        <span style={{ color: '#888', fontSize: 12 }}>{filtered.length} properties found</span>
       </div>
 
       <div style={{ padding: '48px 40px' }}>
@@ -522,7 +409,13 @@ function App() {
           <div style={{ fontSize: 36, color: '#333', fontWeight: 'normal' }}>{filter === 'All' ? 'All Properties' : filter + ' Properties'}</div>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 28 }}>
-          {filtered.map(function(p) {
+          {filtered.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '60px 0', color: '#888', gridColumn: '1/-1' }}>
+              <div style={{ fontSize: 48, marginBottom: 16 }}>🔍</div>
+              <div style={{ fontSize: 20 }}>No properties found</div>
+              <div style={{ fontSize: 14, marginTop: 8 }}>Try a different search or filter</div>
+            </div>
+          ) : filtered.map(function(p) {
             return (
               <div key={p.id} style={{ background: 'white', overflow: 'hidden', border: '1px solid #e8e0d5', cursor: 'pointer', transition: 'transform 0.2s' }}
                 onClick={function() { setSelected(p); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
@@ -555,7 +448,6 @@ function App() {
           })}
         </div>
       </div>
-
       <Footer onNav={handleNav} />
     </div>
   );
